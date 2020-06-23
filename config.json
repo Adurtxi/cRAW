@@ -1,0 +1,18 @@
+{
+    "config": {
+        "sdPath": "",
+        "path": "",
+
+        "sdJPGPath": "/DCIM/100MSDCF",
+        "sdRAWPath": "/DCIM/100MSDCF",
+        "sdMP4Path": "/PRIVATE/M4ROOT/CLIP",
+
+        "jpgExtension": "*.jpg",
+        "rawExtension": "*.ARW",
+        "mp4Extension": "*.mp4",
+
+        "jpgPath": "/JPG",
+        "rawPath": "/RAW",
+        "mp4Path": "/MP4"
+    }
+}
