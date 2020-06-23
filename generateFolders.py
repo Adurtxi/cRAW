@@ -60,8 +60,8 @@ def generateFolders(config, useDefaults):
         sdPath = str(input('\nIntroduce la ruta de la SD: ')) 
    
     # Coger los archivos
-    getFiles(sdPath + config['sdJPGPath'], config['jpgExtension'], pathWithFolder, 'JPG')
-    getFiles(sdPath + config['sdRAWPath'], config['rawExtension'], pathWithFolder, 'RAW')
-    getFiles(sdPath + config['sdMP4Path'], config['mp4Extension'], pathWithFolder, 'MP4')
+    getFiles(sdPath + config['sdJPGPath'], '*' + config['jpgExtension'], pathWithFolder, 'JPG')
+    getFiles(sdPath + config['sdRAWPath'], '*' + config['rawExtension'], pathWithFolder, 'RAW')
+    getFiles(sdPath + config['sdMP4Path'], '*' + config['mp4Extension'], pathWithFolder, 'MP4')
 
     print ('\n\n******************** IMAGENES COPIADAS CORRECTAMENTE ********************')  

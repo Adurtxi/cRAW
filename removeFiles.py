@@ -13,8 +13,8 @@ def removeFiles(config):
     # Ruta de la carpeta
     path = str(input('\nIntroduce la ruta de la carpeta que contenga la carpeta JPG Y RAW: ')) 
 
-    raws = getFiles(path + config['rawPath'], config['rawExtension'], 'RAWs')
-    jpgs = getFiles(path + config['jpgPath'], config['jpgExtension'], 'JPGs')
+    raws = getFiles(path + config['rawPath'], '*' + config['rawExtension'], 'RAWs')
+    jpgs = getFiles(path + config['jpgPath'], '*' + config['jpgExtension'], 'JPGs')
 
     imgsToDelete = []
     
@@ -28,7 +28,7 @@ def removeFiles(config):
 
     if (delete == 1):
         for imgToDelete in imgsToDelete:
-            file = path + '/RAW/' + imgToDelete + '.ARW'
+            file = path + config['rawPath'] + '/' + imgToDelete + config['rawExtension']
             
             if os.path.exists(file):
                 os.remove(file) 
