@@ -1,7 +1,5 @@
 import glob, os
 
-from termcolor import colored
-
 def getFiles(path, ext, type):
     os.chdir(path)
 
@@ -35,4 +33,4 @@ def removeFiles(config):
             if os.path.exists(file):
                 os.remove(file) 
 
-        print (colored('\n******************** IMAGENES RAW ELIMINADOS CORRECTAMENTE ********************', 'green'))
+        print ('\n******************** IMAGENES RAW ELIMINADOS CORRECTAMENTE ********************')
