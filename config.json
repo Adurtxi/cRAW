@@ -7,9 +7,9 @@
         "sdRAWPath": "/DCIM/100MSDCF",
         "sdMP4Path": "/PRIVATE/M4ROOT/CLIP",
 
-        "jpgExtension": "*.jpg",
-        "rawExtension": "*.ARW",
-        "mp4Extension": "*.mp4",
+        "jpgExtension": ".jpg",
+        "rawExtension": ".NEF",
+        "mp4Extension": ".mp4",
 
         "jpgPath": "/JPG",
         "rawPath": "/RAW",
