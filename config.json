@@ -8,7 +8,7 @@
         "sdMP4Path": "/PRIVATE/M4ROOT/CLIP",
 
         "jpgExtension": ".jpg",
-        "rawExtension": ".NEF",
+        "rawExtension": ".ARW",
         "mp4Extension": ".mp4",
 
         "jpgPath": "/JPG",

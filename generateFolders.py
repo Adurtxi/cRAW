@@ -25,7 +25,7 @@ def getFiles(path, ext, pathWithFolder, folder):
 
     for file in glob.glob(ext):
         count = count + 1
-        print (count, '/', filesQuantity, end="\r")
+        print('\n  ', count, ' /', filesQuantity, end="\r")
 
         copyFile(path, pathWithFolder + '/' + folder, file)
 

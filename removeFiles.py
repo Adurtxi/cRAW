@@ -1,11 +1,12 @@
 import glob, os
+import time
 
 def getFiles(path, ext, type):
     os.chdir(path)
 
     filesQuantity = len(glob.glob(ext))
 
-    print('\n', type, 'encotrados:', filesQuantity)
+    print('\n  ', type, 'encotrados:', filesQuantity)
 
     return glob.glob(ext)
 
@@ -22,7 +23,12 @@ def removeFiles(config):
         imgsToDelete.append(raw.partition('.')[0])
 
     for jpg in jpgs:
-        imgsToDelete.remove(jpg.partition('.')[0])
+        if jpg.partition('.')[0] in imgsToDelete:
+            imgsToDelete.remove(jpg.partition('.')[0])
+        
+    imgsToDeleteCount = len(imgsToDelete)
+
+    print('\nImagenes por borrar:', imgsToDeleteCount)
 
     delete = int(input('\nPulsa 1 para borrar los archivos o 0 para salir: ')) 
 
@@ -31,6 +37,8 @@ def removeFiles(config):
             file = path + config['rawPath'] + '/' + imgToDelete + config['rawExtension']
             
             if os.path.exists(file):
-                os.remove(file) 
+                os.remove(file)
 
-        print ('\n******************** IMAGENES RAW ELIMINADOS CORRECTAMENTE ********************')
+        print('\n******************** IMAGENES RAW ELIMINADOS CORRECTAMENTE ********************')
+
+        time.sleep(5)
